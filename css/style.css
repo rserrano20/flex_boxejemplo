@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'PT Serif', serif;
+}
+
+header{
+    text-align: center;
+    background-color:black;
+    padding:20px ;
+    color: blanchedalmond;
+}
+footer{
+    background-color: black;
+    text-align: center;
+    padding: 15px;
+    color: cornsilk;
+}
+/*cntenido de la pagina*/
+section{
+    margin: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.columna{
+    width: 23%; 
+}
+
+.columna img{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+.columna img:hover{
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+    box-shadow: 5px 5px 3px 0px gray;
+    transition: .5s;
+}
+/*efecto*/
+.efectos img:hover{
+    filter: grayscale(80%);
+    transition: all .5s ease-in-out;
+}
+
+.desenfoque img:hover{
+    filter: blur(10px);   
+}
+
+.sepia img:hover{
+    filter: sepia(80%);
+}
+
+.opacidad img:hover{
+    filter: opacity(50%);
+}
+
+/*responsive*/
+/*@media TipoDeMedio and (condicion){
+    aqui escribo el codigo css}
+    (regla del mediaquery)TipoDeMedio: all,screen,print,speech
+    
+    */
+
+@media screen and (min-width:992px){
+    body{
+        background-color: hotpink;
+    }
+    header{
+        background-color: lawngreen;
+        color: rgb(178, 32, 32);
+    }
+}
+
+
+/*dispositivos medianos(medium device)*/
+@media all and (min-width: 768px) and (max-width:991px){
+    .columna {
+        width: 32%;
+    }
+}
+
+/*small device*/
+@media all and (min-width: 600px) and (max-width: 767px){
+  .columna{
+      width: 49%;
+  }
+} 
+
+/*extra small*/
+@media all and (max-width:600px){
+    .columna{
+        width: 99%;
+    }
+}
+
